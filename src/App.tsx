@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+// Bootstrap
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+
+import DirectMessage from './components/DirectMessages'
+import InitialData from './components/InitialData'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <InitialData>
+      <Container fluid>
+        <Row style={{ minHeight: '100vh' }}>
+          <Col md={3}>
+            <DirectMessage />
+          </Col>
+          <Col md={9}></Col>
+        </Row>
+      </Container>
+    </InitialData>
+  )
 }
 
-export default App;
+export default App
