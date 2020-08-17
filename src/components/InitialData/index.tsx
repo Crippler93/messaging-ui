@@ -5,7 +5,6 @@ import { fetchAllStates } from '../../queries/state'
 
 const Component = ({ children }: any) => {
   const { isLoading, error } = useQuery<any[], string>('states', fetchAllStates)
-  console.log(children)
 
   if (isLoading) {
     return <div>Loading...</div>

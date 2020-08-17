@@ -12,7 +12,7 @@ function App() {
     <InitialData>
       <Container fluid>
         <Row style={{ minHeight: '100vh' }}>
-          <Col md={3}>
+          <Col md={3} style={{ backgroundColor: '#1F2326', color: '#fff' }}>
             <DirectMessage />
           </Col>
           <Col md={9}></Col>

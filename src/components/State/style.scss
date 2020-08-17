@@ -1,0 +1,10 @@
+.state {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px grey solid;
+  display: inline-block;
+  &.online {
+    background-color: #04BF45;
+  }
+}
