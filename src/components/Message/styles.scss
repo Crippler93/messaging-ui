@@ -1,0 +1,20 @@
+.Message {
+  width: 100%;
+  padding: 5px;
+  border-top: 1px black solid;
+
+  &:last-child {
+    border-bottom: 1px black solid;
+  }
+  .user{
+    display: block;
+    margin-bottom: 5px;
+  }
+  .text {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .date {
+    display: block;
+  }
+}

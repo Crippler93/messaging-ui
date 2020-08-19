@@ -1,15 +1,15 @@
 import * as React from 'react'
-import { fetchAllMessages } from '../../queries/message'
-import { useQuery } from 'react-query'
+import Message from '../Message'
 
 import './styles.scss'
 
-const Component = () => {
-  const { isLoading, error, data: messages } = useQuery<any[], string>(
-    'messages',
-    fetchAllMessages
-  )
+type compProps = {
+  messages: any[] | undefined
+  isLoading: boolean
+  error: any
+}
 
+const Component = ({ messages, isLoading, error }: compProps) => {
   return (
     <div className="MessageContainer">
       <span>Messages:</span>
@@ -20,7 +20,13 @@ const Component = () => {
           {error ? (
             <span>Something went wrong</span>
           ) : (
-            messages?.map((message) => <span>{message.value}</span>)
+            messages?.map((message) => (
+              <Message
+                text={message.value}
+                user={message.user}
+                date={message.createdAt}
+              />
+            ))
           )}
         </>
       )}
