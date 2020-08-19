@@ -17,6 +17,7 @@
     "react-dom": "^16.13.1",
     "react-query": "^2.5.14",
     "react-scripts": "3.4.3",
+    "socket.io-client": "^2.3.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -41,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@types/socket.io-client": "^1.4.33",
     "prettier": "^2.0.5"
   }
 }

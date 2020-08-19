@@ -7,10 +7,11 @@
 }
 
 .header {
-  border-bottom: 0px;
+  border-bottom: 0px !important;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding-bottom: 0 !important;
 }
 
 .body {
@@ -29,6 +30,6 @@
 
 .background {
   height: 100%;
-  background-color: #1F2326;
+  background-color: #1F2326 !important;
   color: #fff;
 }

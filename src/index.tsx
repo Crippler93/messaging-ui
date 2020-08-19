@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.scss'
-import App from './App'
+
+import { startSocketConnection } from './sockets'
 import * as serviceWorker from './serviceWorker'
+import App from './App'
+import './index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,3 +17,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister()
+startSocketConnection('http://localhost:4000')

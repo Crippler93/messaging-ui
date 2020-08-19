@@ -1,0 +1,13 @@
+.messageInput {
+  flex: 10%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  input {
+    flex: 90%;
+  }
+  button {
+    flex: 10%;
+    background-color: #1F2326 !important;
+  }
+}
