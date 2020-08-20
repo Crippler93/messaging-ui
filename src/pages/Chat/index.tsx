@@ -28,7 +28,7 @@ const Chat = () => {
     }
   }, [])
 
-  const handleSend = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSend = () => {
     console.log('Sending message:', message)
     socket.emit(
       'chat',

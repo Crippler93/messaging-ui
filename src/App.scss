@@ -1,0 +1,17 @@
+@import './styles/mixins.scss';
+
+.fullH {
+  min-height: 100vh;
+  .sidebar {
+    @include black-background;
+  }
+  .main {
+    @include white-background;
+    @include flex-column;
+    padding: 0;
+
+  }
+  &.filter {
+    filter: blur(2px);
+  }
+}

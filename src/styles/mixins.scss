@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+@mixin black-background {
+  background-color: $black !important;
+  color: $white !important;
+}
+
+@mixin white-background {
+  background-color: $white !important;
+  color: $black !important;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}

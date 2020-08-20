@@ -8,6 +8,7 @@ import Collapsible from '../Collapsible'
 import './styles.scss'
 
 const Component = () => {
+  // TODO: Replace user query for room
   const { isLoading, error, data: users } = useQuery<any[], string>(
     'users',
     fetchAllUsers
@@ -22,7 +23,7 @@ const Component = () => {
   }
 
   return (
-    <Collapsible activeKey="0" title="Direct messages">
+    <Collapsible activeKey="0" title="Chat rooms">
       {users?.map((user) => (
         <div key={user._id}>
           <State id={user.state_id} className="mr" />

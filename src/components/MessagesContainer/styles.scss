@@ -1,5 +1,12 @@
+@import '../../styles/variables.scss';
+
 .MessageContainer {
-  padding: 10px;
-  margin: 10px;
   flex: 90%;
+  .header {
+    width: 100%;
+    background-color: $msg-background;
+    color: $white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
 }

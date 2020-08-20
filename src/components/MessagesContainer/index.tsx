@@ -12,11 +12,11 @@ type compProps = {
 const Component = ({ messages, isLoading, error }: compProps) => {
   return (
     <div className="MessageContainer">
-      <span>Messages:</span>
+      <div className="header">General chat</div>
       {isLoading ? (
         <span>Loading...</span>
       ) : (
-        <>
+        <div className="body">
           {error ? (
             <span>Something went wrong</span>
           ) : (
@@ -28,7 +28,7 @@ const Component = ({ messages, isLoading, error }: compProps) => {
               />
             ))
           )}
-        </>
+        </div>
       )}
     </div>
   )

@@ -1,0 +1,32 @@
+@import '../../styles/mixins.scss';
+
+.Collapsible {
+  @include black-background;
+  border: 0px !important;
+  .header {
+    border-bottom: 0px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0 !important;
+    border: 0;
+    .menuIcon{
+      transform: rotate(90deg);
+      &.expanded {
+        transform: rotate(180deg);
+      }
+      &.mr {
+        margin-right: 10px;
+      }
+      transition: transform 0.2s;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .body {
+    padding-top: 0;
+    &.ml {
+      margin-left: 10px;
+    }
+  }
+}

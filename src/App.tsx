@@ -1,34 +1,38 @@
-import React, { MouseEvent } from 'react'
+import React from 'react'
 // Bootstrap
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 
+import Context from './context'
 import DirectMessage from './components/DirectMessages'
-import InitialData from './components/InitialData'
+import ChatRooms from './components/ChatRooms'
+import LoadInitialData from './components/InitialData'
 import Chat from './pages/Chat'
+import BlockUI from './pages/BlockPage'
+
+import './App.scss'
 
 function App() {
+  const [block, setBlock] = React.useState<boolean>(false)
+
   return (
-    <InitialData>
+    <Context.Provider value={{ block, setBlock }}>
       <Container fluid>
-        <Row style={{ minHeight: '100vh' }}>
-          <Col md={3} style={{ backgroundColor: '#1F2326', color: '#fff' }}>
-            <DirectMessage />
-          </Col>
-          <Col
-            md={9}
-            style={{
-              backgroundColor: 'snow',
-              display: 'flex',
-              flexDirection: 'column'
-            }}
-          >
-            <Chat />
-          </Col>
+        <Row className={`fullH ${block ? 'filter' : ''}`}>
+          <LoadInitialData>
+            <Col md={3} className="sidebar">
+              <ChatRooms />
+              <DirectMessage />
+            </Col>
+            <Col md={9} className="main">
+              <Chat />
+            </Col>
+          </LoadInitialData>
         </Row>
+        <BlockUI show={block} />
       </Container>
-    </InitialData>
+    </Context.Provider>
   )
 }
 

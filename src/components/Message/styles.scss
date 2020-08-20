@@ -1,20 +1,35 @@
+@import '../../styles/variables.scss';
+
 .Message {
   width: 100%;
   padding: 5px;
-  border-top: 1px black solid;
-
+  border-top: 1px $black solid;
+  &:first-child {
+    border-top: 0px;
+  }
   &:last-child {
-    border-bottom: 1px black solid;
+    border-bottom: 1px $black solid;
   }
   .user{
     display: block;
     margin-bottom: 5px;
+    color:  $black;
+    font-weight: 700;
+    font-size: 0.9rem;
   }
   .text {
     display: block;
     margin-bottom: 5px;
+    background-color:$msg-text-background;
+    padding: 5px 10px;
+    color: $white;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid $msg-border;
   }
   .date {
     display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
   }
 }
