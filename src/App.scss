@@ -1,17 +1,66 @@
 @import './styles/mixins.scss';
+@import './styles/variables.scss';
 
-.fullH {
+
+main {
   min-height: 100vh;
-  .sidebar {
+  position: relative;
+  header#main {
+    width: 100%;
+    background-color: $msg-background;
+    color: $white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    display: flex !important;
+    flex-flow: row nowrap;
+    align-items: center;
+    img {
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    h4 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  section.content {
+    .sidebar {
+      @include black-background;
+    }
+    .chat {
+      @include white-background;
+      @include flex-column;
+      padding: 0;
+    }
+  }
+  section.sideMenu {
     @include black-background;
+    position: absolute;
+    width: 250px;
+    left: -250px;
+    top: 0px;
+    z-index: 1;
+    transition: left 0.25s;
+    header#sideMenu {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.75rem 1.25rem;
+      h4 {
+        margin: 0;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+    &.active {
+      left: 0px;
+    }
+    height: 100%;
   }
-  .main {
-    @include white-background;
-    @include flex-column;
-    padding: 0;
-
-  }
-  &.filter {
+  .filter {
     filter: blur(2px);
   }
 }
+

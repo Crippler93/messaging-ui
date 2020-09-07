@@ -2,7 +2,7 @@ import * as React from 'react'
 import Accordion from 'react-bootstrap/esm/Accordion'
 import Card from 'react-bootstrap/esm/Card'
 
-import triangle from '../../assets/menu-icon.svg'
+import triangle from '../../assets/collapse-icon.svg'
 import { compProps } from './types'
 
 import './styles.scss'

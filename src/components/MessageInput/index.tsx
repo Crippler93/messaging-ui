@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import sendLogo from '../../assets/paper-plane.svg'
+import sendLogo from '../../assets/paper-plane-icon.svg'
 import { CompProps } from './types'
 
 import './styles.scss'

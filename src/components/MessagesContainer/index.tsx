@@ -12,7 +12,6 @@ type compProps = {
 const Component = ({ messages, isLoading, error }: compProps) => {
   return (
     <div className="MessageContainer">
-      <div className="header">General chat</div>
       {isLoading ? (
         <span>Loading...</span>
       ) : (
@@ -22,6 +21,7 @@ const Component = ({ messages, isLoading, error }: compProps) => {
           ) : (
             messages?.map((message) => (
               <Message
+                key={message._id}
                 text={message.value}
                 user={message.user}
                 date={message.createdAt}
